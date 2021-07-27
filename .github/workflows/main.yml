@@ -35,14 +35,14 @@ jobs:
           echo $HOME
           export GOPATH1=GoLang
           test -d "${GOPATH1}" || mkdir "${GOPATH1}"
-          test -d "${GOPATH1}/src/github.com/voonik" || mkdir -p "${GOPATH1}/src/github.com/voonik"
+          test -d "${GOPATH1}/src/github.com/voonik/jsonstore" || mkdir -p "${GOPATH1}/src/github.com/voonik/jsonstore"
           ls
           pwd
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
-          path: GoLang/src/github.com/voonik
+          path: GoLang/src/github.com/voonik/jsonstore
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -64,7 +64,7 @@ jobs:
           cd github.com/voonik
           ls
           echo "Is Sc2 "
-          cd sc2
+          cd jsonstore
           ls
           
           
