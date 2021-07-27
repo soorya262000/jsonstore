@@ -32,10 +32,13 @@ jobs:
           go-version: '1.16.3'
       - name: Setup Env Vars and work dir
         run: |
+          echo $HOME
           export gg=go env gopath
           export GOPATH1=$HOME/GoLang
           test -d "${GOPATH1}" || mkdir "${GOPATH1}"
           test -d "${GOPATH1}/src/github.com/voonik" || mkdir -p "${GOPATH1}/src/github.com/voonik"
+          ls
+          pwd
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
