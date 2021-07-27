@@ -26,10 +26,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Setup GO
-        uses: actions/setup-go@v2
-        with:
-          go-version: '1.16.3'
+#       - name: Setup GO
+#         uses: actions/setup-go@v2
+#         with:
+#           go-version: '1.16.3'
       - name: Setup Env Vars and work dir
         run: |
           test -d "GoLang/src/github.com/voonik/jsonstore" || mkdir -p "GoLang/src/github.com/voonik/jsonstore"
@@ -50,6 +50,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           cp GoLang/src/github.com/voonik/jsonstore/report.xml ./
+          pwd
+          ls
+          cd ../
+          ls
           git branch
       - name: Test Report
         uses: dorny/test-reporter@v1
