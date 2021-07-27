@@ -52,7 +52,13 @@ jobs:
           cp GoLang/src/github.com/voonik/jsonstore/report.xml ./
           pwd
           ls
+          echo "--------"
           cd ../
+          pwd
+          ls
+          echo "--------"
+          cd ../
+          pwd
           ls
           git branch
       - name: Test Report
