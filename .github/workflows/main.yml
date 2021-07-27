@@ -32,12 +32,7 @@ jobs:
           go-version: '1.16.3'
       - name: Setup Env Vars and work dir
         run: |
-          echo $HOME
-          export GOPATH1=GoLang
-          test -d "${GOPATH1}" || mkdir "${GOPATH1}"
-          test -d "${GOPATH1}/src/github.com/voonik/jsonstore" || mkdir -p "${GOPATH1}/src/github.com/voonik/jsonstore"
-          ls
-          pwd
+          test -d "GoLang/src/github.com/voonik/jsonstore" || mkdir -p "GoLang/src/github.com/voonik/jsonstore"
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
@@ -54,7 +49,7 @@ jobs:
           sudo apt-get install ca-certificates
           echo Add other actions to build,
           echo test, and deploy your project.
-          cp GoLang/src/github.com/voonik/example/report.xml ./
+          cp GoLang/src/github.com/voonik/jsonstore/report.xml ./
           git branch
       - name: Test Report
         uses: dorny/test-reporter@v1
