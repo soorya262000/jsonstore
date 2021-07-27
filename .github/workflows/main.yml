@@ -59,6 +59,7 @@ jobs:
           ls
           cd $HOME
           ls
-          echo $HOME
+          cd GoLang
+          ls
           
           
