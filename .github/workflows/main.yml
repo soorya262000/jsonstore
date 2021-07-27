@@ -33,8 +33,7 @@ jobs:
       - name: Setup Env Vars and work dir
         run: |
           echo $HOME
-          export gg=go env gopath
-          export GOPATH1=$HOME/GoLang
+          export GOPATH1=/GoLang
           test -d "${GOPATH1}" || mkdir "${GOPATH1}"
           test -d "${GOPATH1}/src/github.com/voonik" || mkdir -p "${GOPATH1}/src/github.com/voonik"
           ls
