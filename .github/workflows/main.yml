@@ -54,6 +54,8 @@ jobs:
           sudo apt-get install ca-certificates
           echo Add other actions to build,
           echo test, and deploy your project.
+          cp GoLang/src/github.com/voonik/example/report.xml ./
+          git branch
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
