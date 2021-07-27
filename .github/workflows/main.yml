@@ -18,7 +18,6 @@ env:
   GOPRIVATE: github.com/voonik
   GOPATH1: ~/GoLang
   GOPATH2: ${~/GoLang}
-  GOPATH3: ${{~/GoLang}}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,8 +37,6 @@ jobs:
           test -d "${GOPATH1}/src/github.com/voonik" || mkdir -p "${GOPATH1}/src/github.com/voonik"
           test -d "${GOPATH2}" || mkdir "${GOPATH2}"
           test -d "${GOPATH2}/src/github.com/voonik" || mkdir -p "${GOPATH2}/src/github.com/voonik"
-          test -d "${GOPATH3}" || mkdir "${GOPATH3}"
-          test -d "${GOPATH3}/src/github.com/voonik" || mkdir -p "${GOPATH3}/src/github.com/voonik"
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
