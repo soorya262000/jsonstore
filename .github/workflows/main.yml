@@ -56,5 +56,8 @@ jobs:
           echo test, and deploy your project.
           pwd
           ls
+          cd $HOME
+          ls
           echo $HOME
+          
           
