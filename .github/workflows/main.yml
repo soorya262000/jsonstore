@@ -16,8 +16,6 @@ on:
 env:
   SOURCE_BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
   GOPRIVATE: github.com/voonik
-  GOPATH1: ~/GoLang
-  GOPATH2: ${~/GoLang}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,6 +28,8 @@ jobs:
     steps:
       - name: Setup Env Vars and work dir
         run: |
+          export GOPATH1=~/GoLang
+          export GOPATH2=~/GoLang2
           echo $GOPATH1
           echo $GOPATH2
           echo $GOPATH3
