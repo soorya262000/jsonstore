@@ -54,9 +54,18 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo $GITHUB_WORKSPACE
+          echo "Workspace Contents"
+          ls
           cd GoLang
           ls
           cd src
           ls
+          echo "REpooooo"
+          cd github.com/voonik
+          ls
+          echo "Is Sc2 "
+          cd sc2
+          ls
+          
           
           
