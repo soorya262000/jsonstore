@@ -26,17 +26,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Setup GO
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.16.3'
       - name: Setup Env Vars and work dir
         run: |
-          export GOPATH1=~/GoLang
-          export GOPATH2=~/GoLang2
-          echo $GOPATH1
-          echo $GOPATH2
-          echo $GOPATH3
+          export gg=go env gopath
+          export GOPATH1=$gg/GoLang
           test -d "${GOPATH1}" || mkdir "${GOPATH1}"
           test -d "${GOPATH1}/src/github.com/voonik" || mkdir -p "${GOPATH1}/src/github.com/voonik"
-          test -d "${GOPATH2}" || mkdir "${GOPATH2}"
-          test -d "${GOPATH2}/src/github.com/voonik" || mkdir -p "${GOPATH2}/src/github.com/voonik"
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
