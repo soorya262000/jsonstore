@@ -51,14 +51,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           cp GoLang/src/github.com/voonik/jsonstore/report.xml ./
-          pwd
-          ls
-          echo "--------"
-          cd ../
-          pwd
-          ls
-          echo "--------"
-          cd ../
+          cd GoLang/src/github.com/voonik/jsonstore
           pwd
           ls
           git branch
