@@ -49,13 +49,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           cp GoLang/src/github.com/voonik/jsonstore/report.xml ./
-          cd ~/GoLang/src/github.com/voonik/jsonstore
+          cd GoLang/src/github.com/voonik/jsonstore
           pwd
           ls
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v2
         with:
-          report_paths: '~/GoLang/src/github.com/voonik/jsonstore/*.xml'
+          report_paths: '**/GoLang/src/github.com/voonik/jsonstore/*.xml'
           
           
           
